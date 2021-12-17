@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { Container, Spinner, Table } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <p>Stocks</p>
+        <Spinner animation="border" variant="info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+        <Table striped bordered={false}></Table>
+      </Container>
     </div>
   );
 }
